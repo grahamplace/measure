@@ -1,14 +1,12 @@
-# Download the helper library from https://www.twilio.com/docs/python/install
 from twilio.rest import Client
 import os
 
 
-
 def init_client():
-    # Your Account Sid and Auth Token from twilio.com/console
     account_sid = os.environ['TWILIO_SID']
     auth_token = os.environ['TWILIO_TOKEN']
     return Client(account_sid, auth_token)
+
 
 def send_survey():
     client = init_client()
